@@ -48,7 +48,7 @@
 <body>
     <div class="body">
         <h2>Panda Có Yêu Anh Không?</h2>
-        <img src="https://i.pinimg.com/originals/d8/e9/a4/d8e9a4b81d0be6c7c6efa0040e18f78f.gif" alt="">
+        <img id="imgg" src="https://i.pinimg.com/originals/d8/47/38/d84738b3aaab5c263d5f729a2e419865.gif" alt="">
         <div class="button">
             <a href="index2.html">Em Có</a>
             <a href="#" id="moveLink">Em không</a>
@@ -65,6 +65,7 @@
             this.style.left = x + "px";
             var colors = ["#ff0000", "#00ff00", "#0000ff", "#ffff00", "#ff00ff", "#00ffff", "#0000ff"]; // Mảng chứa các màu hex
             this.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)]; // Chọn một màu ngẫu nhiên từ mảng
+            document.getElementById("imgg").src ="https://i.pinimg.com/originals/b5/af/24/b5af24d2a7eb4e7ec9ac611ddaf16161.gif";
         });
     </script>
 </body>
