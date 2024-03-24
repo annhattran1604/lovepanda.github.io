@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love you</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .body{
+            text-align: center;
+            margin-top: 10%;
+            line-height: 50px;
+        }
+        .body img{
+            width: 300px;
+        }
+        .body h2{
+            font-size: 35px;
+            font-weight: 600;
+            color: blue;
+            text-shadow: 0 0 20px rgb(80, 133, 255),
+                0 0 20px rgb(73, 53, 226),
+                0 0 20px rgb(86, 73, 229);
+        }
+        .body a{
+            
+            display: inline-block;
+            width:100px;
+            margin-right: 20px;
+            font-size: 20px;
+            padding: 5px 20px; 
+            background-color: #007bff; 
+            color: #ffffff; 
+            text-decoration: none;
+            border-radius: 5px; 
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .body #moveLink{
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="body">
+        <h2>Panda Có Yêu Anh Không?</h2>
+        <img src="https://i.pinimg.com/originals/d8/e9/a4/d8e9a4b81d0be6c7c6efa0040e18f78f.gif" alt="">
+        <div class="button">
+            <a href="index2.html">Em Có</a>
+            <a href="#" id="moveLink">Em không</a>
+        </div>
+    </div>
+    <script>
+        document.getElementById("moveLink").addEventListener("click", function(event) {
+            event.preventDefault(); // Ngăn chặn hành động mặc định khi nhấp vào liên kết (tránh chuyển hướng trang)
+
+            // Thay đổi vị trí của phần tử khi được nhấp vào
+            var x = Math.random() * (window.innerWidth - this.offsetWidth);
+            var y = Math.random() * (window.innerHeight - this.offsetHeight);
+            this.style.top = y + "px";
+            this.style.left = x + "px";
+            var colors = ["#ff0000", "#00ff00", "#0000ff", "#ffff00", "#ff00ff", "#00ffff", "#0000ff"]; // Mảng chứa các màu hex
+            this.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)]; // Chọn một màu ngẫu nhiên từ mảng
+        });
+    </script>
+</body>
+</html>
