@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yêu em nhiều</title>
+</head>
+<style>
+    body {
+        background-image: url("https://media.giphy.com/media/xThta8nFTMstY6MQ2k/giphy.gif");
+        background-size: cover;
+    }
+
+    .chaychu1 span,
+    .chaychu2 span,.chaychu3 span, .chaychu4 span {
+        display: inline-block;
+        opacity: 0;
+    }
+
+    .chaychu1 span, .chaychu3 span {
+        animation: hienchu1 5s forwards;
+    }
+
+    .chaychu2 span,.chaychu4 span {
+        animation: hienchu2 5s forwards;
+    }
+
+    @keyframes hienchu1 {
+        0% {
+            opacity: 0;
+            transform: translateY(50%);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0%);
+        }
+    }
+
+    @keyframes hienchu2 {
+        0% {
+            opacity: 0;
+            transform: translateY(50%);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0%);
+        }
+    }
+    #center{
+        text-align: center;
+        margin-top: 200px;
+    }
+    .text{
+        font-size: 50px;
+        color: #fff;
+    }
+</style>
+
+<body>
+    <audio autoplay>
+        <source src="mp3/love.mp3" type="audio/mpeg">
+    </audio>
+    <div id="center">
+        <div class="chaychu1 text">
+            <span>My baby love you so much forever you and I</span>
+        </div>
+        <div class="chaychu2 text">
+            <span>I love you oh! I love you so much forever you and I</span>
+        </div>
+        <div class="chaychu3 text">
+            <span>My baby love you so much forever you and I</span>
+        </div>
+        <div class="chaychu4 text">
+            <span>I love you oh! I love you so much forever you and I</span>
+        </div>
+    </div>
+   
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var chaychu1 = document.querySelector('.chaychu1');
+            var chaychu2 = document.querySelector('.chaychu2');
+            var chaychu3 = document.querySelector('.chaychu3');
+            var chaychu4 = document.querySelector('.chaychu4');
+
+            chaychu2.style.display = 'none';
+
+            chaychu1.style.display = 'none';
+            chaychu3.style.display = 'none';
+
+            chaychu4.style.display = 'none';
+            // Chạy .chaychu2 sau khi .chaychu1 hoàn tất
+            setTimeout(function () {
+                chaychu1.style.display = 'block';
+            }, 4000);
+            setTimeout(function () {
+                chaychu2.style.display = 'block';
+            }, 10000); // 5000ms = 5s, thời gian tương đương với thời gian hoàn thành của .chaychu1
+            setTimeout(function () {
+                chaychu3.style.display = 'block';
+            }, 18000); // 5000ms = 5s, thời gian tương đương với thời gian hoàn thành của .chaychu1
+            setTimeout(function () {
+                chaychu4.style.display = 'block';
+            }, 24000); // 5000ms = 5s, thời gian tương đương với thời gian hoàn thành của .chaychu1
+        });
+
+    </script>
+</body>
+
+</html>
